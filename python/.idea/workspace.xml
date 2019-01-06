@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6de59c-4909-4b8c-a56a-78d00de302d1" name="Default Changelist" comment="" />
+    <list default="true" id="ba6de59c-4909-4b8c-a56a-78d00de302d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="2580">
+              <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -80,6 +85,7 @@
       <find>InitMembershipMatrix</find>
       <find>ComputeCentroids</find>
       <find>denominator</find>
+      <find>algorithm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,10 +102,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="y" value="-7" />
+    <option name="width" value="1550" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -132,7 +139,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub-IR/crawler/IR-Crawler" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -237,10 +244,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="760" y="0" width="784" height="832" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21686748" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.06382979" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -249,7 +256,7 @@
       <window_info anchor="bottom" id="Find" order="4" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.39235127" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.28" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.15276696" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -268,8 +275,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="35" />
+          <line>57</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -331,8 +338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="2580">
+          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

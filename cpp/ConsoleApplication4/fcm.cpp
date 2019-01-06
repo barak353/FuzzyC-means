@@ -84,8 +84,8 @@ Point* FCM::ComputeCentroids(Point* points, int n, int dimenstional){
 		//Weight.
 		Point WeightsOfXvec(dimenstional);
 		double sumOfWeights = 0.0;
-		for (int i = 0; i < n; i++) {
 		// (numerator\denominator) = sigma[0-n]((W[i][c])^2) * X[i]\ sigma[0-n]((W[i][c])^2)
+		for (int i = 0; i < n; i++) {
 			double denominator = pow(m_W[i][c], m_p);
 			Point numerator = denominator * points[i];
 			WeightsOfXvec += numerator;
@@ -117,7 +117,7 @@ void FCM::algorithm(Point* points, int n , int dimenstional) {
 	/*:param X: set of points*/
 		this->printPoints(points, n, dimenstional);
 	bool computeCenters = false;
-	if (m_clustersCenters == nullptr) computeCenters = true;
+	if (m_clustersCenters != nullptr) computeCenters = true;
 	if (m_W == nullptr) {
 		int numOfPoints = n;
 		InitMembershipMatrix(numOfPoints);
