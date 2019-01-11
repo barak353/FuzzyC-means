@@ -31,10 +31,9 @@ private:
     double** m_W;
     int m_threshold;
     Point* m_clustersCenters;
-
-	double euclideanDistance(double* X, int* c, int len);
+	double ComputeWeight(Point* points, size_t i, size_t c);
 	void InitMembershipMatrix(int numOfPoints = 2);
-	Point* ComputeCentroids(Point* points, int n, int m);
+	Point* ComputeCentroids(Point* points, int n);
 	void printPoints(Point* points, int n, int m) const;
 	void printW() const;
 

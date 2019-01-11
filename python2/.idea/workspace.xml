@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba6de59c-4909-4b8c-a56a-78d00de302d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/ipch/AutoPCH/539b14257890ebb1/FCM.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/ipch/AutoPCH/539b14257890ebb1/FCM.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/ipch/AutoPCH/ada163d3b8bb3611/FCMEXAMPLE.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/.vs/ConsoleApplication4/v15/ipch/AutoPCH/ada163d3b8bb3611/FCMEXAMPLE.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/ConsoleApplication4.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleA.1844846B.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/ConsoleApplication4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/fcm.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/fcmExample.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/point.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/vc140.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/Debug/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/fcm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/point.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/ConsoleApplication4/point.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cpp/ConsoleApplication4/point.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/Debug/ConsoleApplication4.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/Debug/ConsoleApplication4.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cpp/Debug/ConsoleApplication4.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/FcmExample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="103" column="17" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/numpy/add_newdocs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding>
+                <element signature="e#364#428#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>self.logger</find>
+      <find>self.loggr</find>
+      <find>self.max_iter</find>
+      <find>self.m</find>
+      <find>self.n_clusters</find>
+      <find>self.u</find>
+      <find>init_membership</find>
+      <find>max_iter</find>
+      <find>compute_cluster_centers</find>
+      <find>init</find>
+      <find>update_func</find>
+      <find>SMALL_VALUE</find>
+      <find>fit</find>
+      <find>clustersCenters</find>
+      <find>do_compute_cluster_centers</find>
+      <find>num</find>
+      <find>predict</find>
+      <find>set_membership_from_hard_cluster</find>
+      <find>WeightsOfXvec</find>
+      <find>X</find>
+      <find>centersList</find>
+      <find>centers</find>
+      <find>InitMembershipMatrix</find>
+      <find>ComputeCentroids</find>
+      <find>denominator</find>
+      <find>UpdateWeights</find>
+      <find>ComputeWeight</find>
+      <find>algorithm</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/fuzzycmeans/__init__.py" />
+        <option value="$PROJECT_DIR$/fuzzycmeans/visualization.py" />
+        <option value="$PROJECT_DIR$/examples/fcm_2d.py" />
+        <option value="$PROJECT_DIR$/examples/FcmExample.py" />
+        <option value="$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1840" />
+    <option name="y" value="128" />
+    <option name="width" value="1490" />
+    <option name="height" value="1049" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="fuzzycmeans" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../GitHub-IR/crawler/IR-Crawler" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.FcmExample">
+    <configuration name="FcmExample" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="fuzzy-c-means-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\User\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/FcmExample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fcm_2d" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fuzzy-c-means-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\ravir\Documents\לימודים\סמסטר ח\תכנות מדעי\fuzzy-c-means-master\examples\FcmExample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_typical" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fuzzy-c-means-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_typical.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.FcmExample" />
+      <item itemvalue="Python.fcm_2d" />
+      <item itemvalue="Python.test_typical" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test_typical" />
+        <item itemvalue="Python.fcm_2d" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba6de59c-4909-4b8c-a56a-78d00de302d1" name="Default Changelist" comment="" />
+      <created>1545656829784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545656829784</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1927" y="134" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.04097819" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="2" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32907802" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.39235127" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.17847025" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24966443" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="X" />
+        <watch expression="self.W" />
+        <watch expression="centers" />
+        <watch expression="X[i]" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fuzzycmeans/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/output.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/run_tests.sh" />
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/requirements.txt" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/tests/test_typical.py" />
+    <entry file="file://$PROJECT_DIR$/fuzzycmeans/visualization.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/1041300995/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="4212" column="8" selection-start-line="4212" selection-start-column="8" selection-end-line="4212" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/FcmExample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/numpy/add_newdocs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="e#364#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzzycmeans/fuzzy_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

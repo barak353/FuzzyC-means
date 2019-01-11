@@ -8,7 +8,7 @@ Point::Point() {
 
 Point::Point(int dimensional) {
 	m_coordinates = new double[dimensional];
-	for (int i = 0; i < dimensional; i++) { m_coordinates[i] = 0.0; }
+	for (size_t i = 0; i < dimensional; i++) { m_coordinates[i] = 0.0; }
 	m_dimensional = dimensional;
 }
 
@@ -29,10 +29,14 @@ Point::Point(const Point&& point) {
 	*this = std::move(point);
 }
 
+int Point::getDimensional(void) {
+	return m_dimensional;
+}
+
 Point& Point::operator+(const  Point& p) const{
 	if (p.getDimensional() != m_dimensional)  throw std::invalid_argument("received negative value");
 	double* coordinates = new double[m_dimensional];
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		coordinates[i] = m_coordinates[i];
 		coordinates[i] += p[i];
 	}
@@ -44,7 +48,7 @@ void Point::operator=(const  Point& p)
 	if (this != nullptr) {
 		m_dimensional = p.getDimensional();
 		m_coordinates = new double[m_dimensional];
-		for (int i = 0; i < m_dimensional; i++) {
+		for (size_t i = 0; i < m_dimensional; i++) {
 			m_coordinates[i] = p[i];
 		}
 	}
@@ -64,7 +68,7 @@ double& Point::operator[](size_t index) const{
 
 Point& Point::operator/(const Point& p) const {
 	Point* point = new Point(m_coordinates, m_dimensional);
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		(*point)[i] = (m_coordinates[i] / p.getCoordinate()[i]);
 	}
 	return *point;
@@ -72,7 +76,7 @@ Point& Point::operator/(const Point& p) const {
 
 Point& Point::operator/(double denominator) const {
 	Point* point = new Point(m_coordinates, m_dimensional);
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		(*point)[i] = (m_coordinates[i] / denominator);
 	}
 	return *point;
@@ -80,7 +84,7 @@ Point& Point::operator/(double denominator) const {
 
 Point& Point::operator*(double multiplier) const {
 	Point* point = new Point(m_coordinates, m_dimensional);
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		(*point)[i] = (m_coordinates[i] * multiplier);
 	}
 	return *point;
@@ -95,7 +99,7 @@ int Point::getDimensional() const {
 }
 
 std::ostream& operator<< (std::ostream& stream, const Point& point) {
-	for (int j = 0; j < point.getDimensional(); j++) {
+	for (size_t j = 0; j < point.getDimensional(); j++) {
 		if(point.getCoordinate()[j] < 10)
 			stream << point.getCoordinate()[j] << ' ';
 		else
@@ -112,7 +116,7 @@ Point& operator*(double multiplier, Point& point) {
 
 Point& Point::operator+(double val) {
 	Point* point = new Point(m_coordinates, m_dimensional);
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		(*point)[i] = (m_coordinates[i] + val);
 	}
 	return *point;
@@ -124,8 +128,18 @@ Point& operator+(double val, Point& point) {
 
 Point& Point::operator+=(const  Point& p) {
 	if (p.getDimensional() != m_dimensional)  throw std::invalid_argument("received negative value");
-	for (int i = 0; i < m_dimensional; i++) {
+	for (size_t i = 0; i < m_dimensional; i++) {
 		m_coordinates[i] += p[i];
 	}
 	return *(this);
+}
+
+double Point::euclideanDistance(Point& p1, Point& p2) {
+	if (p1.getDimensional() != p2.getDimensional()) return -1;
+	double euclideanDistance = 0.0;
+	double sum = 0.0;
+	for (size_t i = 0; i < p1.getDimensional(); i++) {
+		sum += pow(p1[i] - p2[i], 2);
+	}
+	return sqrt(sum);
 }

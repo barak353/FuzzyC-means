@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import numpy as np
 import random
 
@@ -15,7 +14,7 @@ class FCM:
             4) compute the centers of the clusters
     """
 
-    def __init__(self, numOfClusters=2, p=2):
+    def __init__(self, numOfClusters=2, p=9):
 
         self.numOfClusters = numOfClusters
         # The fuzziness.
@@ -100,17 +99,21 @@ class FCM:
         :return: weight of the given element
         """
         numerator = self.EuclideanDistance(X[i], self.clustersCenters[c])
+        # To prevent from return infinity.
+        if numerator == 0:
+            numerator = 1.0 - Epsilon
+        numerator = (1 / numerator) ** (1.0 / (self.p - 1))
         sum = 0.0
-        # (numerator\denominator) = dist(xi,cj)^(1\p-1) \ sigma[0-numOfClusters](dist(xi,cj)^(1\p-1))
+        # (numerator\denominator) = (1 / dist(xi,cj)^(1\p-1)) \ sigma[0-numOfClusters](1/dist(xi,cj)^(1\p-1))
         for cluster in self.clustersCenters:
             denominator = self.EuclideanDistance(cluster, X[i])
             if denominator == 0.0:
-                denominator = Epsilon
-            sum += (numerator / denominator) ** (1.0 / (self.p - 1))
+                denominator = 1 / Epsilon
+            sum += ((1 / denominator) ** (1.0 / (self.p - 1)))
         # To prevent from return infinity.
         if sum == 0:
             return 1.0 - Epsilon
-        return sum ** -1
+        return (numerator / sum)
 
     def Algorithm(self, X):
         """
@@ -123,19 +126,14 @@ class FCM:
             numOfPoints = X.shape[0]
             self.InitMembershipMatrix(numOfPoints)
         centersList = []
-        while computeCenters:
+        i = 0
+        while computeCenters and i < 50:
+            i += 1
             centers = self.ComputeCentroids(X)
             centersList.append(centers)
             centersList = np.array(centersList).tolist()
             self.UpdateWeights(X)
             if centersList.__len__() >= 3:
-                if any(x in centersList[centersList.__len__() - 1]  for x in centersList[centersList.__len__() - 3]):
+                if any(x in centersList[centersList.__len__() - 1] for x in centersList[centersList.__len__() - 3]):
                     computeCenters = False
-
-        print("number of iterations:")
-        print(centersList.__len__())
-        print("result:")
-        print(self.W)
-        plt.matshow(np.asarray(self.W))
-        plt.colorbar()
-        plt.show()
+        return self.W

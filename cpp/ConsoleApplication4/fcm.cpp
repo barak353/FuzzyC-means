@@ -72,50 +72,63 @@ void FCM::InitMembershipMatrix(int numOfPoints) {
 //	this->print(m_W, numOfPoints, m_numOfClusters);
 }
 
-Point* FCM::ComputeCentroids(Point* points, int n, int dimenstional){
+Point* FCM::ComputeCentroids(Point* points, int n){
 	/*  :param points: data points.
         :param n: num of points.
         :param dimenstional: dimenstional of point.
         :return: weight of the given element
         */
+	if (n == 0 || points == nullptr) return nullptr;
 	Point* centers = new Point[m_numOfClusters];
 	// For each cluster
 	for (int c = 0; c < m_numOfClusters; c++) {
 		//Weight.
-		Point WeightsOfXvec(dimenstional);
+		Point WeightsOfXvec(points[0].getDimensional());
 		double sumOfWeights = 0.0;
 		// (numerator\denominator) = sigma[0-n]((W[i][c])^2) * X[i]\ sigma[0-n]((W[i][c])^2)
 		for (int i = 0; i < n; i++) {
 			double denominator = pow(m_W[i][c], m_p);
-			Point numerator = denominator * points[i];
+			Point& numerator = denominator * points[i];
+			//std::cout << "numerator: " << numerator << endl;
 			WeightsOfXvec += numerator;
+			//std::cout << "WeightsOfXvec: " << WeightsOfXvec << endl;
+
 			sumOfWeights += denominator;
+			//std::cout << "sumOfWeights: " << sumOfWeights << endl;
+
 		}
 		if (sumOfWeights == 0.0) {
 			// To prevent division in zero.
 			sumOfWeights = 0.000001;
 		}
+		//std::cout << "WeightsOfXvec: " << WeightsOfXvec << endl;
+		//std::cout << "sumOfWeights: " << sumOfWeights << endl;
+		//std::cout << "WeightsOfXvec / sumOfWeights: " << WeightsOfXvec / sumOfWeights << endl;
+
 		m_clustersCenters[c] = WeightsOfXvec / sumOfWeights;
+		//std::cout << "m_clustersCenters[" << c << "]: " << m_clustersCenters[c] << endl;
 	}
-	printPoints(m_clustersCenters, m_numOfClusters, dimenstional);
 	return m_clustersCenters;
 }
 
-double FCM::euclideanDistance(double* x, int* c, int len) {
-	/*Compute the Euclidean distance between X and C
-	: param x : set of X points
-	: param c : the center or a cluster
-	: return : the distance*/
-	double dis = 0.0;
-	for(int i = 0; i < len; i++) {
-		dis += pow(x[i] - c[i], 2);
-	}
-	return sqrt(dis);//Ask Ravit why she missed here the sqrt.
+
+double FCM::ComputeWeight(Point* points, size_t i, size_t c) {
+	/*
+		:param X : data points
+		: param i : specific element in x
+		: param c : specific cluster
+		: return : weight of the given element
+	*/
+
+	double numerator = 0.0;
+	//numerator = pow( points, 2)
+
+
 }
 
 void FCM::algorithm(Point* points, int n , int dimenstional) {
 	/*:param X: set of points*/
-		this->printPoints(points, n, dimenstional);
+	this->printPoints(points, n, dimenstional);
 	bool computeCenters = false;
 	if (m_clustersCenters != nullptr) computeCenters = true;
 	if (m_W == nullptr) {
@@ -127,8 +140,10 @@ void FCM::algorithm(Point* points, int n , int dimenstional) {
 	std::vector<Point> centersList;
 	int c = 0;
 	while(computeCenters) {
-		ComputeCentroids(points, n, dimenstional);
-		//Point* centers = ComputeCentroids(points, n, m);
+		Point* centers = ComputeCentroids(points, n);
+		printPoints(centers, m_numOfClusters, centers[0].getDimensional());
+
+
 		//centersList.push_back(centers[c]);
 		/*            self.UpdateWeights(X)
             if centersList.__len__() >= 3:
