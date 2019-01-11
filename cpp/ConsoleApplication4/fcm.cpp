@@ -11,7 +11,7 @@
 #include <iostream>
 #include <iomanip>
 
-const double FCM::epsillon = 0.00001;
+const double FCM::Epsilon = 0.00001;
 
 FCM::FCM(int numOfClusters, int dimenstional, int p, int threshold) : m_clustersCenters(nullptr), m_numOfPoints(0){
     m_numOfClusters = numOfClusters;
@@ -64,7 +64,7 @@ void FCM::InitMembershipMatrix(int numOfPoints) {
             if (randNum + rowSum <= 1.0) {
                 m_W[i][j] = randNum;
                 rowSum += m_W[i][j];
-            }
+			}
         }
         //If it's the last iteration (sum can be more than 1.0).
         m_W[i][m_numOfClusters - 1] = 1.0 - rowSum;
@@ -111,6 +111,21 @@ Point* FCM::ComputeCentroids(Point* points, int n){
 	return m_clustersCenters;
 }
 
+void FCM::updateWeights(Point* points, size_t n) {
+	/*
+		update the weights matrix
+		: param X : data points
+	*/
+	for (size_t i = 0; i < n; i++) {
+		for (size_t c = 0; c < m_numOfClusters; c++) {
+			m_W[i][c] = ComputeWeight(points, i, c);
+		}
+		this->printW();
+	}
+
+}
+
+
 
 double FCM::ComputeWeight(Point* points, size_t i, size_t c) {
 	/*
@@ -120,9 +135,25 @@ double FCM::ComputeWeight(Point* points, size_t i, size_t c) {
 		: return : weight of the given element
 	*/
 
-	double numerator = 0.0;
-	//numerator = pow( points, 2)
-
+	double numerator = Point::euclideanDistance(points[i], m_clustersCenters[c]);
+	numerator = pow(numerator, 2);
+	//To prevent from return infinity.
+	if (numerator == 0)
+		numerator = 1.0 - Epsilon;
+	numerator = pow(1 / numerator, 1.0 / (m_p - 1));
+	double sum = 0.0;
+	//(numerator/denominator) = (1 / dist(xi,cj)^(1/p-1)) / sigma[0-numOfClusters](1/dist(xi,cj)^(1/p-1))
+	for (size_t q = 0; q < m_numOfClusters; q++) {
+		double denominator = Point::euclideanDistance(m_clustersCenters[q], points[i]);
+		denominator = pow(denominator, 2);
+		if (denominator == 0.0) {
+			denominator = 1 / Epsilon;
+		}
+		sum += pow(1 / denominator, 1.0 / (m_p - 1));
+	}
+	//To prevent from return infinity.
+	if (sum == 0) return 1.0 - Epsilon;
+	return (numerator / sum);
 
 }
 
@@ -142,7 +173,7 @@ void FCM::algorithm(Point* points, int n , int dimenstional) {
 	while(computeCenters) {
 		Point* centers = ComputeCentroids(points, n);
 		printPoints(centers, m_numOfClusters, centers[0].getDimensional());
-
+		updateWeights(points, n);
 
 		//centersList.push_back(centers[c]);
 		/*            self.UpdateWeights(X)
@@ -157,14 +188,14 @@ void FCM::algorithm(Point* points, int n , int dimenstional) {
 void FCM::printW() const {
 	std::cout << "Whight Matrix is:" << endl << "  | ";
 	std::cout << std::fixed;
-	std::cout << std::setprecision(2);
+	std::cout << std::setprecision(8);
 	for (int i = 0; i < m_numOfClusters; i++) {
-		if(i < 10) std::cout << i << "    | ";
-		else std::cout << i << "   | ";
+		if(i < 10) std::cout << i << "          | ";
+		else std::cout << i << "         | ";
 	}
 	std::cout << endl << "--";
 	for (int i = 0; i < m_numOfClusters; i++) {
-		std::cout << "-------";
+		std::cout << "-------------";
 	}
 	std::cout << "|" << endl;
 	for (int i = 0; i < m_numOfPoints; i++) {
@@ -179,14 +210,15 @@ void FCM::printW() const {
 
 
 void FCM::printPoints(Point* points, int n, int m) const{
-	std::cout << "Points:" << endl << "  | ";
+	std::cout << "Clusters:" << endl << "  | ";
 
 	for (int i = 0; i < m; i++) {
-		std::cout << i << "  | ";
+		if (i < 10) std::cout << i << "           | ";
+		else std::cout << i << "          | ";
 	}
-	std::cout << endl << "---";
+	std::cout << endl << "--";
 	for (int i = 0; i < m; i++) {
-		std::cout << "----";
+		std::cout << "-------------";
 	}
 	std::cout << "--|";
 	cout << endl;

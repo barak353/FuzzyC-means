@@ -24,7 +24,7 @@ public:
     ~FCM();
 	void algorithm(Point* points, int n, int m);
 private:
-	static const double epsillon;
+	static const double Epsilon;
     int m_numOfClusters;
 	int m_numOfPoints;
     int m_p;
@@ -34,6 +34,7 @@ private:
 	double ComputeWeight(Point* points, size_t i, size_t c);
 	void InitMembershipMatrix(int numOfPoints = 2);
 	Point* ComputeCentroids(Point* points, int n);
+	void updateWeights(Point* points, size_t n);
 	void printPoints(Point* points, int n, int m) const;
 	void printW() const;
 
