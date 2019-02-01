@@ -8,7 +8,7 @@ int main()
 {
 	const int numOfPoints = 8;
 	int dimensional = 2;
-	int numOfClusters = 9;
+	int numOfClusters = 8;
 
 	Point points[numOfPoints];
 	double c1[2] = { 1, 1 };
