@@ -10,18 +10,18 @@ public:
 	Point(int dimensional);
 	Point();
 	int getDimensional(void);
-	Point& operator+(const  Point& p) const;
-	double& operator[](size_t index) const;
-	void operator=(const  Point& p);
-	void operator=(const  Point&& p);
-	Point& operator/(const Point& p) const;
+	inline Point& operator+(const  Point& p) const;
+	inline double& operator[](size_t index) const;
+	inline void operator=(const  Point& p);
+	inline void operator=(const  Point&& p);
+	inline Point& operator/(const Point& p) const;
 	friend std::ostream& operator<< (std::ostream& stream, const Point& point);
-	Point& operator/(double denominator) const;
-	Point& operator*(double multiplier) const;
+	inline Point& operator/(double denominator) const;
+	inline Point& operator*(double multiplier) const;
 	friend Point& operator*(double multiplier, Point& point);
-	Point& Point::operator+(double val);
-	friend Point& operator+(double val, Point& point);
-	Point& Point::operator+=(const  Point& p);
+	inline Point& Point::operator+(double val);
+	inline friend Point& operator+(double val, Point& point);
+	inline Point& Point::operator+=(const  Point& p);
 	static double euclideanDistance(Point& p1, Point& p2);
 private:
 	double* m_coordinates;

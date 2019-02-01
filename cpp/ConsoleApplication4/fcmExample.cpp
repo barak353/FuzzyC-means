@@ -8,6 +8,8 @@ int main()
 {
 	const int numOfPoints = 8;
 	int dimensional = 2;
+	int numOfClusters = 9;
+
 	Point points[numOfPoints];
 	double c1[2] = { 1, 1 };
 	Point p1(c1, dimensional);
@@ -33,7 +35,6 @@ int main()
 	double c8[2] = { 20, 20 };
 	Point p8(c8, dimensional);
 	points[7] = p8;
-	int numOfClusters = 3;
 	FCM fcm(numOfClusters);
 	// Record start time
 	auto start = std::chrono::high_resolution_clock::now();
@@ -42,6 +43,7 @@ int main()
 	auto finish = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> elapsed = finish - start;
 	std::cout << "Elapsed time: " << elapsed.count() << " s\n";
+	getchar();
     return 0;
 }
 
