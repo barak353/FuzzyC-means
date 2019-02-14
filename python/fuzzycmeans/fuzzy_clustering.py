@@ -55,16 +55,13 @@ class FCM:
         for c in range(0, self.numOfClusters):
             # Weight
             WeightsOfXvec = np.zeros(m)
-            sumOfWeights = 0.0
+            sumOfWeights = Epsilon
             for i in range(0, n):
                 # (numerator\denominator) = sigma[0-n]((W[i][c])^2) * X[i]\ sigma[0-n]((W[i][c])^2)
                 denominator = (self.W[i][c] ** self.p)
                 numerator = denominator * X[i]
                 WeightsOfXvec += numerator
                 sumOfWeights += denominator
-            if sumOfWeights == 0:
-                # To prevent division in zero.
-                sumOfWeights = 0.000001
             centers.append(WeightsOfXvec / sumOfWeights)
         # Update list.
         self.clustersCenters = centers
@@ -88,8 +85,7 @@ class FCM:
         :param X: data points
         """
         for i in range(0, X.shape[0]):
-            for c in range(0, len(self.clustersCenters)):
-                self.W[i][c] = self.ComputeWeight(X, i, c)
+            self.W[i] = [self.ComputeWeight(X, i, c) for c in range(0, len(self.clustersCenters))]
 
     def ComputeWeight(self, X, i, c):
         """
@@ -98,21 +94,13 @@ class FCM:
         :param c: specific cluster
         :return: weight of the given element
         """
-        numerator = self.EuclideanDistance(X[i], self.clustersCenters[c])
-        # To prevent from return infinity.
-        if numerator == 0:
-            numerator = 1.0 - Epsilon
+        numerator = self.EuclideanDistance(X[i], self.clustersCenters[c]) or 1.0 - Epsilon
         numerator = (1 / numerator) ** (1.0 / (self.p - 1))
-        sum = 0.0
+        v = np.array([1] * len(self.clustersCenters)).reshape([len(self.clustersCenters), 1])
         # (numerator\denominator) = (1 / dist(xi,cj)^(1\p-1)) \ sigma[0-numOfClusters](1/dist(xi,cj)^(1\p-1))
-        for cluster in self.clustersCenters:
-            denominator = self.EuclideanDistance(cluster, X[i])
-            if denominator == 0.0:
-                denominator = 1 / Epsilon
-            sum += ((1 / denominator) ** (1.0 / (self.p - 1)))
-        # To prevent from return infinity.
-        if sum == 0:
-            return 1.0 - Epsilon
+        denominator = [((self.EuclideanDistance(cluster, X[i])) or 1 / Epsilon)  for cluster in self.clustersCenters]
+        denominatorList = [((1 / denominator[i]) ** (1.0 / (self.p - 1))) for i in range(0,len(denominator))]
+        sum = denominatorList @ v
         return (numerator / sum)
 
     def Algorithm(self, X):
@@ -133,7 +121,7 @@ class FCM:
             centersList.append(centers)
             centersList = np.array(centersList).tolist()
             self.UpdateWeights(X)
-            if centersList.__len__() >= 3:
-                if any(x in centersList[centersList.__len__() - 1] for x in centersList[centersList.__len__() - 3]):
+            if centersList.__len__() >= 2:
+                if any(x in centersList[centersList.__len__() - 1] for x in centersList[centersList.__len__() - 2]):
                     computeCenters = False
         return self.W
